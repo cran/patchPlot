@@ -1,6 +1,6 @@
-6078e7205fa6aa2fb3a9b0f228090b98 *DESCRIPTION
+1734dc5780afbdacf99a82f3ae3a664d *DESCRIPTION
 5ca4e6ac61ba4ca3d45a462a53c257eb *NAMESPACE
-ce0543bd71a16f593f32737fb06c0e8a *R/functions.R
+1c8a47f59947d58fecbcb63b41e970ab *R/functions.R
 02e8a319e88254d69308f9c21c3055a8 *man/Lab2RGB.Rd
 bf441f8c55d097721c3b3b5a0723199f *man/RGB2Lab.Rd
 06b0005723b3b7cacb5ee8829e96cd99 *man/animatePatches.Rd
@@ -9,5 +9,6 @@ bf441f8c55d097721c3b3b5a0723199f *man/RGB2Lab.Rd
 31b5a0efe4a198f393a49a07bef98f50 *man/drawPatches.Rd
 e0fd29384b3ea6856e0e93e5c984c6dc *man/drawSinglePatch.Rd
 1f0950761f444aaba0035184f9ada796 *man/genHatchData.Rd
+930f3e784e517fe8fe6e4956411481c8 *man/getInterRGB.Rd
 e14431c62a9c810cbc837903542f8f03 *man/plotGmmOverlay.Rd
 0e03f6dde8e02d32253563330424b33b *man/plotGreyPatches.Rd

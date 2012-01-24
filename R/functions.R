@@ -300,7 +300,22 @@ checkGmm <- function(obj) {
 }
 
 
+getInterRGB <- function(vals, zeroColor, oneColor) {
+	if (any(vals < 0 || vals > 1)) {
+		stop("vals values should range in [0,1]")
+	}
 
+	labzero <- RGB2Lab(col2rgb(zeroColor) / 255)
+	labone <- RGB2Lab(col2rgb(oneColor) / 255)
+	
+	interL <- vals * labone[1] + (1-vals) * labzero[1]
+	intera <- vals * labone[2] + (1-vals) * labzero[2]
+	interb <- vals * labone[3] + (1-vals) * labzero[3]
+	
+	rgbmat <- Lab2RGB(cbind(interL, intera, interb))
+	rgbres <- rgb(rgbmat[,1], rgbmat[,2], rgbmat[,3])
+	return(rgbres)
+}
 
 
 
