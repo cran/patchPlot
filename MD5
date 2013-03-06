@@ -1,10 +1,11 @@
-1734dc5780afbdacf99a82f3ae3a664d *DESCRIPTION
+699909df4f8d9b8ab4e90dfdeb2e5891 *DESCRIPTION
 5ca4e6ac61ba4ca3d45a462a53c257eb *NAMESPACE
-1c8a47f59947d58fecbcb63b41e970ab *R/functions.R
+ba8f0abfbb3ee0cd41343d860dbc8ca3 *R/functions.R
 02e8a319e88254d69308f9c21c3055a8 *man/Lab2RGB.Rd
 bf441f8c55d097721c3b3b5a0723199f *man/RGB2Lab.Rd
 06b0005723b3b7cacb5ee8829e96cd99 *man/animatePatches.Rd
 34bf962db853836240ba0a512a16e1c9 *man/checkGmm.Rd
+2cf1ea9763c61c2def05d574718b7986 *man/colorPlot.Rd
 6588721e7439c8e062e1bc97df05b000 *man/drawGradient.Rd
 31b5a0efe4a198f393a49a07bef98f50 *man/drawPatches.Rd
 e0fd29384b3ea6856e0e93e5c984c6dc *man/drawSinglePatch.Rd

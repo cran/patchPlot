@@ -319,3 +319,49 @@ getInterRGB <- function(vals, zeroColor, oneColor) {
 
 
 
+# plot a data.frame with color cells.
+# data.frame values must be in [0,1] : the associated colors is then taken
+# on the gradient from zeroColor to oneColor
+# inspired from myImagePlot (http://www.phaget4.org/R/image_matrix.html)
+colorPlot <- function(x, zeroColor, oneColor){
+	if (any(x > 1) || any(x < 0)) {
+		stop("x must take values in [0,1]")
+	}
+    yLabels <- rownames(x)
+    xLabels <- colnames(x)
+    title <-c()
+
+	layout(matrix(data=c(1,2), nrow=1, ncol=2), widths=c(4,1), heights=c(1,1))
+
+ 	ColorRamp <- getInterRGB(seq(0,1,length=256), zeroColor, oneColor)
+ 	ColorLevels <- seq(0, 1, length=length(ColorRamp))
+
+ 	# Reverse Y axis
+ 	reverse <- nrow(x) : 1
+ 	yLabels <- yLabels[reverse]
+ 	x <- x[reverse,]
+
+ 	# Data Map
+ 	par(mar = c(3,5,2.5,2))
+ 	image(1:length(xLabels), 1:length(yLabels), t(x), col=ColorRamp, xlab="",
+ 		ylab="", axes=FALSE, zlim=c(0, 1))
+
+	axis(BELOW<-1, at=1:length(xLabels), labels=xLabels, cex.axis=1.2)
+ 	axis(LEFT <-2, at=1:length(yLabels), labels=yLabels, las= HORIZONTAL<-1,
+ 		cex.axis=1.2)
+
+ 	# Color Scale
+ 	par(mar = c(3,2.5,2.5,2))
+ 	image(1, ColorLevels,
+      	matrix(data=ColorLevels, ncol=length(ColorLevels),nrow=1),
+      	col=ColorRamp,
+      	xlab="",ylab="",
+      	xaxt="n")
+
+ 	layout(1)
+ 	return(NULL)
+}
+
+
+
+
